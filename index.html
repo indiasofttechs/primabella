@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primabella Dental Clinic | Dubai</title>
+    <link rel="icon" href="fevicon.jpg" type="image/jpeg">
+    <meta name="description"
+        content="Best Dental Clinic in Discovery Gardens, Dubai. Top Dentists providing premium care.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Premium fonts for an elegant, professional look -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@500;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1A365D;
+            /* Deep elegant navy */
+            --light-blue: #F0F4F8;
+            /* Soft blue-gray */
+            --dark-blue: #0A192F;
+            /* Very dark navy */
+            --accent-color: #C5A880;
+            /* Elegant soft gold/champagne */
+            --accent-hover: #D6B991;
+            --text-main: #1A202C;
+            /* Darker for better visibility */
+            --text-gray: #4A5568;
+            /* Darker for better visibility */
+            --bg-white: #FFFFFF;
+            --bg-gray: #F0F5F9;
+            /* More colorful light blue-gray */
+            --heading-color: #0A192F;
+            --card-bg: #FFFFFF;
+            --nav-bg: #FFFFFF;
+            --hero-gradient: linear-gradient(135deg, rgba(230, 240, 255, 0.85) 0%, rgba(247, 241, 230, 0.85) 100%);
+            --input-border: #E2E8F0;
+            --brand-blue: #1A365D;
+            --inverse-text: #FFFFFF;
+            --btn-text: #FFFFFF;
+            --primary-hover: var(--dark-blue);
+            --font-main: 'Inter', sans-serif;
+            --font-heading: 'Playfair Display', serif;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        body.dark-theme {
+            --primary-blue: #90CDF4;
+            --light-blue: #2D3748;
+            --dark-blue: #0A192F;
+            --text-main: #E2E8F0;
+            --text-gray: #A0AEC0;
+            --bg-white: #1A202C;
+            --bg-gray: #111827;
+            /* Richer dark */
+            --heading-color: #F7FAFC;
+            --card-bg: #1F2937;
+            --nav-bg: #1A202C;
+            --hero-gradient: linear-gradient(135deg, rgba(26, 32, 44, 0.88) 0%, rgba(17, 24, 39, 0.88) 100%);
+            --input-border: #374151;
+            --btn-text: #1A202C;
+            --primary-hover: #63B3ED;
+            --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.5);
+            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-main);
+            background-color: var(--bg-white);
+            line-height: 1.7;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--heading-color);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 30px;
+            font-weight: 500;
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: var(--btn-text);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .btn-accent {
+            background-color: var(--accent-color);
+            color: var(--btn-text);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-accent:hover {
+            background-color: var(--accent-hover);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: var(--dark-blue);
+            color: var(--inverse-text);
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        .top-bar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar-left,
+        .top-bar-right {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Header / Navbar */
+        header {
+            background: var(--nav-bg);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-heading);
+            letter-spacing: -0.5px;
+        }
+
+        .logo img {
+            height: 45px;
+            width: auto;
+            border-radius: 6px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .logo span {
+            color: var(--accent-color);
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            font-weight: 500;
+            color: #9e9e9e;
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-blue);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: var(--text-main);
+            margin-left: 10px;
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        /* Mobile Menu */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--primary-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--bg-white);
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .hero-banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            color: var(--heading-color);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 span {
+            color: var(--primary-blue);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+        }
+
+        .hero-form-box {
+            flex: 1;
+            background: var(--card-bg);
+            padding: 45px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            border-top: 5px solid var(--accent-color);
+        }
+
+        .hero-form-box h3 {
+            font-size: 24px;
+            color: var(--heading-color);
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--input-border);
+            border-radius: 4px;
+            font-family: var(--font-main);
+            background: var(--bg-white);
+            color: var(--text-main);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            background: linear-gradient(135deg, var(--brand-blue) 0%, var(--dark-blue) 100%);
+            padding: 40px 0;
+            color: var(--inverse-text);
+        }
+
+        .badges-grid {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .badge-item h4 {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .badge-item p {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Sections General */
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--heading-color);
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            font-size: 32px;
+            color: var(--heading-color);
+            margin-bottom: 15px;
+        }
+
+        .about-content h3 {
+            font-size: 20px;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .about-content p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .about-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .about-features li {
+            color: var(--heading-color);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .about-features li::before {
+            content: '✔';
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+        }
+
+        .about-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .about-experience-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--primary-blue);
+            color: white;
+            padding: 25px;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 5px solid var(--bg-white);
+        }
+
+        .about-experience-badge span {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .about-experience-badge p {
+            font-size: 12px;
+            margin: 0;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-experience-badge {
+                bottom: 10px;
+                right: 10px;
+            }
+        }
+
+        /* Services */
+        .bg-gray {
+            background-color: var(--bg-gray);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom-color: var(--accent-color);
+            box-shadow: var(--shadow-lg);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--light-blue);
+            color: var(--primary-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .service-more-text {
+            display: none;
+            margin-top: 15px;
+            color: var(--text-gray);
+            font-size: 14px;
+            text-align: left;
+            border-top: 1px solid #eaeaea;
+            padding-top: 15px;
+        }
+
+        .service-more-text.expanded {
+            display: block;
+            animation: fadeIn 0.4s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .service-card h3 {
+            color: var(--heading-color);
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: var(--text-gray);
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* Doctors Section */
+        .doctors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            justify-content: center;
+        }
+
+        .doctor-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .doctor-img {
+            height: 350px;
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-gray);
+            overflow: hidden;
+        }
+
+        .doctor-img img {
+            transition: transform 0.6s ease;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .doctor-card:hover .doctor-img img {
+            transform: scale(1.08);
+        }
+
+        .doctor-info {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .doctor-info h3 {
+            color: var(--heading-color);
+            margin-bottom: 5px;
+        }
+
+        .doctor-info p.spec {
+            color: var(--primary-blue);
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Reviews / Before After Placeholder */
+        .reviews-container {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 20px;
+            scroll-behavior: smooth;
+        }
+
+        .reviews-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .reviews-container {
+            scrollbar-width: none;
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            max-width: 100%;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .carousel-btn:hover {
+            background: var(--dark-blue);
+        }
+
+        .carousel-btn.prev {
+            left: -20px;
+        }
+
+        .carousel-btn.next {
+            right: -20px;
+        }
+
+        .review-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #eaeaea;
+            position: relative;
+            flex: 0 0 calc(50% - 15px);
+            scroll-snap-align: start;
+        }
+
+        @media (max-width: 768px) {
+            .review-card {
+                flex: 0 0 100%;
+            }
+        }
+
+        .review-card::before {
+            content: '"';
+            font-size: 80px;
+            color: var(--light-blue);
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-family: serif;
+            opacity: 0.6;
+            line-height: 1;
+        }
+
+        .review-text {
+            font-style: italic;
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .review-author {
+            font-weight: 700;
+            color: var(--heading-color);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+
+        .modal-content h3 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: var(--heading-color);
+        }
+
+        .modal-form-group {
+            margin-bottom: 15px;
+        }
+
+        .modal-form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--input-border);
+            border-radius: 4px;
+            font-family: var(--font-main);
+            background: var(--bg-white);
+            color: var(--text-main);
+        }
+
+        .modal-form-control:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        .btn-cancel {
+            background: transparent;
+            color: var(--text-gray);
+            border: 1px solid var(--text-gray);
+            margin-left: 10px;
+        }
+
+        .btn-cancel:hover {
+            background: var(--bg-gray);
+        }
+
+        /* Time Slots Styles */
+        .time-slots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            gap: 10px;
+            margin-top: 5px;
+            max-height: 150px;
+            overflow-y: auto;
+            padding-right: 5px;
+        }
+
+        .time-slot {
+            padding: 8px 10px;
+            border: 1px solid var(--input-border);
+            border-radius: 4px;
+            text-align: center;
+            font-size: 13px;
+            cursor: pointer;
+            transition: var(--transition);
+            background: var(--bg-white);
+            color: var(--text-main);
+        }
+
+        .time-slot:hover:not(.disabled) {
+            border-color: var(--primary-blue);
+            background: var(--light-blue);
+        }
+
+        .time-slot.selected {
+            background: var(--primary-blue);
+            color: var(--btn-text);
+            border-color: var(--primary-blue);
+        }
+
+        .time-slot.disabled {
+            background: var(--bg-gray);
+            color: var(--text-gray);
+            text-decoration: line-through;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-blue);
+            color: #b3c6d6;
+            padding: 70px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            color: var(--inverse-text);
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--inverse-text);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+        /* Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-100 {
+            transition-delay: 100ms;
+        }
+
+        .delay-200 {
+            transition-delay: 200ms;
+        }
+
+        .delay-300 {
+            transition-delay: 300ms;
+        }
+
+        .delay-400 {
+            transition-delay: 400ms;
+        }
+
+        /* Responsive */
+        @media(max-width: 992px) {
+            .hero-container {
+                flex-direction: column;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .reviews-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media(max-width: 768px) {
+            .top-bar {
+                display: none;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--bg-white);
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-container">
+            <div class="top-bar-left">
+                <span>📍 Discovery Gardens, Dubai</span>
+                <span>🕒 Mon - Sat: 9:00 AM - 9:00 PM</span>
+            </div>
+            <div class="top-bar-right">
+                <span>📞 +971 56 510 9359</span>
+                <span>✉️ info@primabella.ae</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <img src="logo.jpeg" alt="Primabella Dental Logo">
+                Primabella<span>Dental</span>
+            </a>
+            <button class="hamburger" id="mobile-menu-btn">☰</button>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#doctors">Our Dentists</a>
+                <a href="#reviews">Reviews</a>
+                <button class="theme-toggle" id="theme-toggle" title="Toggle Dark/Light Mode">🌙</button>
+                <a href="javascript:void(0);" class="btn btn-primary open-modal-btn">Book Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero animate-on-scroll">
+        <img src="hospital.png" alt="Primabella Dental Clinic" class="hero-banner-img">
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="trust-badges">
+        <div class="container badges-grid">
+            <div class="badge-item">
+                <h4>15+</h4>
+                <p>Years Experience</p>
+            </div>
+            <div class="badge-item">
+                <h4>10k+</h4>
+                <p>Happy Patients</p>
+            </div>
+            <div class="badge-item">
+                <h4>5.0 ★</h4>
+                <p>Google Reviews</p>
+            </div>
+            <div class="badge-item">
+                <h4>100%</h4>
+                <p>Pain-Free Care</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container about-grid">
+            <div class="about-content animate-on-scroll">
+                <h2>Welcome to Primabella Dental</h2>
+                <h3>Excellence in Dentistry in Discovery Gardens</h3>
+                <p>At Primabella Dental Clinic, we believe that a healthy, beautiful smile is the foundation of
+                    confidence. Led by Dr. Vaishali Darshan Battul, our modern clinic is equipped with the latest dental
+                    technology to provide you with the highest standard of care in a comfortable, relaxing environment.
+                </p>
+                <p>We take pride in our patient-first approach, ensuring that every treatment plan is customized to your
+                    unique needs, whether you're here for a routine check-up or a complete smile makeover.</p>
+                <ul class="about-features">
+                    <li>State-of-the-art dental technology</li>
+                    <li>Highly experienced specialist team</li>
+                    <li>100% pain-free treatment approach</li>
+                    <li>Strict sterilization protocols</li>
+                </ul>
+                <a href="javascript:void(0);" class="btn btn-primary open-modal-btn">Schedule Your Visit</a>
+            </div>
+            <div class="about-image-wrapper animate-on-scroll delay-200">
+                <div class="about-image">
+                    <img src="entrance.png" alt="About Primabella Dental Clinic">
+                </div>
+                <div class="about-experience-badge">
+                    <span>15+</span>
+                    <p>Years<br>Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding bg-gray">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Our Dental Services</h2>
+                <p>Comprehensive dental treatments tailored to your unique needs using the latest technology.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll delay-100">
+                    <div class="service-icon" style="padding: 0; overflow: hidden; background: transparent;"><img src="service_general_1782847288452.png" alt="General Dentistry" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <h3>General Dentistry</h3>
+                    <p>Routine check-ups, cleanings, and preventive care to keep your smile healthy.</p>
+                    <a href="javascript:void(0);" class="read-more-btn"
+                        style="color: var(--primary-blue); font-weight: 500; cursor: pointer;">Read More →</a>
+                    <div class="service-more-text">
+                        Includes thorough dental examinations, scaling, polishing, and professional fluoride treatments.
+                        We ensure early detection of any dental issues to prevent complicated procedures.
+                    </div>
+                </div>
+                <div class="service-card animate-on-scroll delay-200">
+                    <div class="service-icon" style="padding: 0; overflow: hidden; background: transparent;"><img src="service_cosmetic_1782847298178.png" alt="Cosmetic Dentistry" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <h3>Cosmetic Dentistry</h3>
+                    <p>Veneers, teeth whitening, and smile makeovers for a radiant appearance.</p>
+                    <a href="javascript:void(0);" class="read-more-btn"
+                        style="color: var(--primary-blue); font-weight: 500; cursor: pointer;">Read More →</a>
+                    <div class="service-more-text">
+                        Get your dream smile with our custom-made porcelain veneers, Zoom! teeth whitening sessions, and
+                        aesthetic contouring customized for your unique facial structure.
+                    </div>
+                </div>
+                <div class="service-card animate-on-scroll delay-300">
+                    <div class="service-icon" style="padding: 0; overflow: hidden; background: transparent;"><img src="service_ortho_1782847306596.png" alt="Orthodontics" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <h3>Orthodontics</h3>
+                    <p>Clear aligners and braces to straighten teeth and correct your bite.</p>
+                    <a href="javascript:void(0);" class="read-more-btn"
+                        style="color: var(--primary-blue); font-weight: 500; cursor: pointer;">Read More →</a>
+                    <div class="service-more-text">
+                        We offer modern Invisalign treatments and traditional ceramic/metal braces. Achieve a perfectly
+                        aligned bite without the hassle of older, painful orthodontic methods.
+                    </div>
+                </div>
+                <div class="service-card animate-on-scroll delay-400">
+                    <div class="service-icon" style="padding: 0; overflow: hidden; background: transparent;"><img src="service_implant_1782847315097.png" alt="Dental Implants" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <h3>Dental Implants</h3>
+                    <p>Permanent, natural-looking solutions for missing teeth restoration.</p>
+                    <a href="javascript:void(0);" class="read-more-btn"
+                        style="color: var(--primary-blue); font-weight: 500; cursor: pointer;">Read More →</a>
+                    <div class="service-more-text">
+                        Utilizing 3D scanning, we safely insert premium titanium implants that fuse with your jawbone.
+                        This provides a lifetime foundation for crowns that look exactly like your natural teeth.
+                    </div>
+                </div>
+                <div class="service-card animate-on-scroll delay-500">
+                    <div class="service-icon" style="padding: 0; overflow: hidden; background: transparent;"><img src="service_pediatric_1782847474584.png" alt="Pediatric Dentistry" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <h3>Pediatric Dentistry</h3>
+                    <p>Gentle and fun dental care specialized for children of all ages.</p>
+                    <a href="javascript:void(0);" class="read-more-btn"
+                        style="color: var(--primary-blue); font-weight: 500; cursor: pointer;">Read More →</a>
+                    <div class="service-more-text">
+                        We provide specialized care for kids, ensuring their first visits are fun and fear-free. From sealants to fluoride treatments, we protect their growing smiles.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="section-padding">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Our Top Dentists</h2>
+                <p>Meet the experts dedicated to providing you with the highest standard of dental care.</p>
+            </div>
+            <div class="doctors-grid">
+                <div class="doctor-card animate-on-scroll delay-100">
+                    <div class="doctor-img">
+                        <img src="dr_vaishali.png" style="height: 100%;">
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Vaishali Darshan Battul</h3>
+                        <p class="spec">Owner & Lead Dental Surgeon</p>
+                        <div
+                            style="display: flex; gap: 8px; justify-content: center; margin-bottom: 12px; flex-wrap: wrap;">
+                            <span
+                                style="background: var(--light-blue); color: var(--primary-blue); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">15+
+                                Years Exp.</span>
+                            <span
+                                style="background: var(--light-blue); color: var(--primary-blue); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">BDS,
+                                MDS</span>
+                        </div>
+                        <p style="color: var(--text-gray); font-size: 14px; margin-bottom: 15px;">Expert in cosmetic and
+                            general dentistry with a focus on pain-free treatments and patient comfort.</p>
+                        <a href="javascript:void(0);" class="btn btn-primary open-modal-btn"
+                            style="padding: 8px 20px; font-size: 14px;">Book
+                            Consultation</a>
+                    </div>
+                </div>
+                <div class="doctor-card animate-on-scroll delay-200">
+                    <div class="doctor-img">
+                        <img src="dr_s.jpg" style="height: 100%;">
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Esha J</h3>
+                        <p class="spec">Orthodontist</p>
+                        <div
+                            style="display: flex; gap: 8px; justify-content: center; margin-bottom: 12px; flex-wrap: wrap;">
+                            <span
+                                style="background: var(--light-blue); color: var(--primary-blue); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">8+
+                                Years Exp.</span>
+                            <span
+                                style="background: var(--light-blue); color: var(--primary-blue); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">Invisalign
+                                Certified</span>
+                        </div>
+                        <p style="color: var(--text-gray); font-size: 14px; margin-bottom: 15px;">Specializes in clear
+                            aligners and modern braces for perfect smile correction.</p>
+                        <a href="javascript:void(0);" class="btn btn-primary open-modal-btn"
+                            style="padding: 8px 20px; font-size: 14px;">Book
+                            Consultation</a>
+                    </div>
+                </div>
+                <div class="doctor-card animate-on-scroll delay-300">
+                    <div class="doctor-img">
+                        <img src="dr_nj.jpeg" style="height: 100%;">
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Nikhil J</h3>
+                        <p class="spec">Implantologist</p>
+                        <div
+                            style="display: flex; gap: 8px; justify-content: center; margin-bottom: 12px; flex-wrap: wrap;">
+                            <span
+                                style="background: var(--light-blue); color: var(--primary-blue); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">10+
+                                Years Exp.</span>
+                            <span
+                                style="background: var(--light-blue); color: var(--primary-blue); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">Oral
+                                Surgeon</span>
+                        </div>
+                        <p style="color: var(--text-gray); font-size: 14px; margin-bottom: 15px;">Over 10 years of
+                            experience in advanced dental implants and oral surgery.</p>
+                        <a href="javascript:void(0);" class="btn btn-primary open-modal-btn"
+                            style="padding: 8px 20px; font-size: 14px;">Book
+                            Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery" class="section-padding">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Our Clinic Gallery</h2>
+                <p>Take a tour of our modern, state-of-the-art facility designed for your comfort.</p>
+            </div>
+            <div class="gallery-grid">
+                <img src="gallery_reception_1782847509923.png" alt="Clinic Reception" class="gallery-img animate-on-scroll delay-100">
+                <img src="gallery_treatment_1782847520003.png" alt="Treatment Room" class="gallery-img animate-on-scroll delay-200">
+                <img src="gallery_waiting_1782847532622.png" alt="Waiting Area" class="gallery-img animate-on-scroll delay-300">
+                <img src="gallery_tools_1782847545660.png" alt="Advanced Equipment" class="gallery-img animate-on-scroll delay-400">
+            </div>
+        </div>
+    </section>
+
+    <!-- Patient Reviews -->
+    <section id="reviews" class="section-padding bg-gray">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Patient Reviews</h2>
+                <p>See what our patients have to say about their experience at Primabella.</p>
+            </div>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev" id="review-prev">&#10094;</button>
+                <div class="reviews-container" id="reviews-container">
+                    <div class="review-card animate-on-scroll delay-100">
+                        <div class="reviewer-header"
+                            style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                            <img src="reviewer_sarah_1782846790505.png" alt="Sarah M."
+                                style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                            <div>
+                                <div style="color: var(--accent-color); font-size: 14px; margin-bottom: 5px;">★★★★★
+                                </div>
+                                <p class="review-author"
+                                    style="margin: 0; font-weight: 600; color: var(--heading-color);">Sarah M.</p>
+                            </div>
+                        </div>
+                        <p class="review-text">"Dr. Vaishali is incredibly professional and gentle. The clinic is
+                            spotless and the staff is very welcoming. Highly recommend for anyone looking for a top
+                            dentist in Discovery Gardens!"</p>
+                    </div>
+                    <div class="review-card animate-on-scroll delay-200">
+                        <div class="reviewer-header"
+                            style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                            <img src="reviewer_ahmed_1782846800110.png" alt="Ahmed R."
+                                style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                            <div>
+                                <div style="color: var(--accent-color); font-size: 14px; margin-bottom: 5px;">★★★★★
+                                </div>
+                                <p class="review-author"
+                                    style="margin: 0; font-weight: 600; color: var(--heading-color);">Ahmed R.</p>
+                            </div>
+                        </div>
+                        <p class="review-text">"I was always nervous about dental visits, but the team at Primabella
+                            made it completely pain-free. State-of-the-art clinic and amazing service."</p>
+                    </div>
+                    <div class="review-card animate-on-scroll delay-300">
+                        <div class="reviewer-header"
+                            style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                            <img src="reviewer_john_1782846809720.png" alt="John D."
+                                style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                            <div>
+                                <div style="color: var(--accent-color); font-size: 14px; margin-bottom: 5px;">★★★★★
+                                </div>
+                                <p class="review-author"
+                                    style="margin: 0; font-weight: 600; color: var(--heading-color);">John D.</p>
+                            </div>
+                        </div>
+                        <p class="review-text">"Got my dental implants done by Dr. Nikhil. The whole procedure was
+                            seamless and the results are incredibly natural. The best dental clinic experience I've ever
+                            had."</p>
+                    </div>
+                    <div class="review-card animate-on-scroll delay-400">
+                        <div class="reviewer-header"
+                            style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                            <img src="reviewer_maria_1782846819484.png" alt="Maria L."
+                                style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                            <div>
+                                <div style="color: var(--accent-color); font-size: 14px; margin-bottom: 5px;">★★★★★
+                                </div>
+                                <p class="review-author"
+                                    style="margin: 0; font-weight: 600; color: var(--heading-color);">Maria L.</p>
+                            </div>
+                        </div>
+                        <p class="review-text">"I brought my daughter for her braces. Dr. Esha is fantastic with kids
+                            and explains everything clearly. Highly recommend the orthodontics team here!"</p>
+                    </div>
+                    <div class="review-card animate-on-scroll delay-500">
+                        <div class="reviewer-header"
+                            style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                            <img src="reviewer_robert_1782846831019.png" alt="Robert T."
+                                style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                            <div>
+                                <div style="color: var(--accent-color); font-size: 14px; margin-bottom: 5px;">★★★★★
+                                </div>
+                                <p class="review-author"
+                                    style="margin: 0; font-weight: 600; color: var(--heading-color);">Robert T.</p>
+                            </div>
+                        </div>
+                        <p class="review-text">"From the friendly receptionist to the highly skilled dentists,
+                            everything was perfect. I finally found a clinic I can trust with my entire family's dental
+                            health."</p>
+                    </div>
+                    <div class="review-card animate-on-scroll delay-600">
+                        <div class="reviewer-header"
+                            style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                            <img src="reviewer_emma_1782846842420.png" alt="Emma W."
+                                style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                            <div>
+                                <div style="color: var(--accent-color); font-size: 14px; margin-bottom: 5px;">★★★★★
+                                </div>
+                                <p class="review-author"
+                                    style="margin: 0; font-weight: 600; color: var(--heading-color);">Emma W.</p>
+                            </div>
+                        </div>
+                        <p class="review-text">"The teeth whitening treatment gave me instant results! I couldn't stop
+                            smiling for days. Thank you so much for the exceptional cosmetic work."</p>
+                    </div>
+                </div>
+                <button class="carousel-btn next" id="review-next">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Primabella Dental</h3>
+                    <p style="margin-bottom: 15px;">Premium dental care in the heart of Discovery Gardens, Dubai. We are
+                        committed to your smile.</p>
+                    <p style="margin-bottom: 5px;">📍 Discovery Gardens, Dubai</p>
+                    <a href="https://maps.google.com/?q=Discovery+Gardens,+Dubai" target="_blank"
+                        style="color: var(--primary-blue); font-weight: 500; text-decoration: none; display: inline-block; margin-bottom: 15px; font-size: 14px;">Open
+                        in Google Maps ↗</a>
+                    <p>📞 +971 56 510 9359</p>
+                    <p>✉️ info@primabella.ae</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#doctors">Meet the Team</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Working Hours</h3>
+                    <ul class="footer-links">
+                        <li>Monday: 9:00 AM - 9:00 PM</li>
+                        <li>Tuesday: 9:00 AM - 9:00 PM</li>
+                        <li>Wednesday: 9:00 AM - 9:00 PM</li>
+                        <li>Thursday: 9:00 AM - 9:00 PM</li>
+                        <li>Friday: 9:00 AM - 9:00 PM</li>
+                        <li>Saturday: 9:00 AM - 9:00 PM</li>
+                        <li>Sunday: Closed</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Primabella Dental Clinic. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <h3>Book Consultation</h3>
+            <form id="booking-form">
+                <div class="modal-form-group">
+                    <input type="text" class="modal-form-control" placeholder="Your Name" required>
+                </div>
+                <div class="modal-form-group">
+                    <input type="tel" class="modal-form-control" placeholder="Phone Number" required>
+                </div>
+                <div class="modal-form-group" style="display: flex; gap: 15px;">
+                    <input type="date" id="booking-date" class="modal-form-control" required style="flex: 1;">
+                    <input type="hidden" id="booking-time" required>
+                </div>
+                <div class="modal-form-group">
+                    <label style="font-size: 14px; font-weight: 500; margin-bottom: 8px; display: block;">Select a
+                        Time</label>
+                    <div id="time-slots-container" class="time-slots-grid">
+                        <div style="font-size: 13px; color: var(--text-gray); padding: 10px;">Please select a date
+                            first.</div>
+                    </div>
+                </div>
+                <div class="modal-form-group">
+                    <textarea class="modal-form-control"
+                        placeholder="Please describe your issue or what you need help with (optional)"
+                        rows="3"></textarea>
+                </div>
+                <div style="display: flex; justify-content: flex-end; margin-top: 20px;">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-cancel" id="close-modal-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const navMenu = document.getElementById('nav-menu');
+
+            mobileBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+
+            // Close mobile menu on link click
+            const links = navMenu.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
+
+            // Theme Toggle Logic
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const currentTheme = localStorage.getItem('theme');
+            if (currentTheme === 'dark') {
+                document.body.classList.add('dark-theme');
+                themeToggleBtn.innerText = '☀️';
+            }
+
+            themeToggleBtn.addEventListener('click', () => {
+                document.body.classList.toggle('dark-theme');
+                let theme = 'light';
+                if (document.body.classList.contains('dark-theme')) {
+                    theme = 'dark';
+                    themeToggleBtn.innerText = '☀️';
+                } else {
+                    themeToggleBtn.innerText = '🌙';
+                }
+                localStorage.setItem('theme', theme);
+            });
+
+            // Intersection Observer for scroll animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Stop observing once visible
+                    }
+                });
+            }, observerOptions);
+
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+            animatedElements.forEach(el => observer.observe(el));
+
+            // Read More Toggle Logic
+            const readMoreBtns = document.querySelectorAll('.read-more-btn');
+            readMoreBtns.forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const moreText = this.nextElementSibling;
+                    moreText.classList.toggle('expanded');
+                    if (moreText.classList.contains('expanded')) {
+                        this.innerText = 'Read Less ↑';
+                    } else {
+                        this.innerText = 'Read More →';
+                    }
+                });
+            });
+
+            // Modal Logic
+            const modal = document.getElementById('booking-modal');
+            const openModalBtns = document.querySelectorAll('.open-modal-btn');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            const bookingForm = document.getElementById('booking-form');
+
+            openModalBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    modal.classList.add('active');
+                });
+            });
+
+            closeModalBtn.addEventListener('click', () => {
+                modal.classList.remove('active');
+            });
+
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+
+            // Time Slot Logic
+            const bookingDate = document.getElementById('booking-date');
+            const bookingTime = document.getElementById('booking-time');
+            const timeSlotsContainer = document.getElementById('time-slots-container');
+
+            const generateTimeSlots = () => {
+                const times = [];
+                for (let i = 9; i <= 18; i++) {
+                    const ampm = i >= 12 ? 'PM' : 'AM';
+                    let hour = i > 12 ? i - 12 : i;
+                    times.push(`${hour}:00 ${ampm}`);
+                    if (i !== 18) times.push(`${hour}:30 ${ampm}`);
+                }
+                return times;
+            };
+            const allTimeSlots = generateTimeSlots();
+
+            bookingDate.addEventListener('change', (e) => {
+                const dateSelected = e.target.value;
+                if (!dateSelected) {
+                    timeSlotsContainer.innerHTML = '<div style="font-size: 13px; color: var(--text-gray); padding: 10px;">Please select a date first.</div>';
+                    bookingTime.value = '';
+                    return;
+                }
+
+                const bookedData = JSON.parse(localStorage.getItem('bookedSlots') || '{}');
+                const bookedForDate = bookedData[dateSelected] || [];
+
+                timeSlotsContainer.innerHTML = '';
+                bookingTime.value = '';
+
+                allTimeSlots.forEach(time => {
+                    const slot = document.createElement('div');
+                    slot.className = 'time-slot';
+                    slot.innerText = time;
+
+                    if (bookedForDate.includes(time)) {
+                        slot.classList.add('disabled');
+                        slot.title = 'Already booked';
+                    } else {
+                        slot.addEventListener('click', () => {
+                            document.querySelectorAll('.time-slot').forEach(el => el.classList.remove('selected'));
+                            slot.classList.add('selected');
+                            bookingTime.value = time;
+                        });
+                    }
+                    timeSlotsContainer.appendChild(slot);
+                });
+            });
+
+            const today = new Date().toISOString().split('T')[0];
+            bookingDate.setAttribute('min', today);
+
+            bookingForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                if (!bookingTime.value) {
+                    alert("Please select a time slot.");
+                    return;
+                }
+
+                const submitBtn = bookingForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerText;
+                submitBtn.innerText = 'Sending...';
+
+                setTimeout(() => {
+                    const dateSelected = bookingDate.value;
+                    const timeSelected = bookingTime.value;
+
+                    const bookedData = JSON.parse(localStorage.getItem('bookedSlots') || '{}');
+                    if (!bookedData[dateSelected]) bookedData[dateSelected] = [];
+                    bookedData[dateSelected].push(timeSelected);
+                    localStorage.setItem('bookedSlots', JSON.stringify(bookedData));
+
+                    submitBtn.innerText = 'Confirmed!';
+                    submitBtn.style.backgroundColor = '#28a745';
+
+                    setTimeout(() => {
+                        submitBtn.innerText = originalText;
+                        submitBtn.style.backgroundColor = '';
+                        bookingForm.reset();
+                        timeSlotsContainer.innerHTML = '<div style="font-size: 13px; color: var(--text-gray); padding: 10px;">Please select a date first.</div>';
+                        modal.classList.remove('active');
+                    }, 2000);
+                }, 1500);
+            });
+
+            // Carousel Navigation
+            const reviewsContainer = document.getElementById('reviews-container');
+            const reviewPrev = document.getElementById('review-prev');
+            const reviewNext = document.getElementById('review-next');
+
+            if (reviewsContainer && reviewPrev && reviewNext) {
+                reviewPrev.addEventListener('click', () => {
+                    reviewsContainer.scrollBy({ left: -reviewsContainer.offsetWidth / 2, behavior: 'smooth' });
+                });
+                reviewNext.addEventListener('click', () => {
+                    reviewsContainer.scrollBy({ left: reviewsContainer.offsetWidth / 2, behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
